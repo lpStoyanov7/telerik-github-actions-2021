@@ -7,7 +7,7 @@ on:
     - 'factoriel.py'
     - 'lint_test.py'
 
-job:
+jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -17,6 +17,7 @@ job:
       run: echo "The name of the branch is ${{ github.ref }} in repository ${{ github.repository }}"
     - name: Check out repository code
       uses: actions/checkout@v2
+    - name: After actions
       run: echo "The ${{ github.repository }} has cloned to the runner."
     - name: Set up Python
       uses: action/setup-python@v2
